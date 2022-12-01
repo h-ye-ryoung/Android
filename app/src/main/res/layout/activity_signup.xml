@@ -45,11 +45,13 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/et_email"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="2dp"
                 android:hint="이메일 주소"
+                android:inputType="textEmailAddress"
                 android:textColor="#1B1B1B"
                 android:textColorHint="#9B9B9B" />
 
@@ -85,11 +87,13 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/et_pwd"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="2dp"
                 android:hint="6자리 이상 비밀번호"
+                android:inputType="textPassword"
                 android:textColor="#1B1B1B"
                 android:textColorHint="#9B9B9B" />
         </LinearLayout>
@@ -121,11 +125,13 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/et_pwd_ide"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="2dp"
                 android:hint="비밀번호 확인"
+                android:inputType="textPassword"
                 android:textColor="#1B1B1B"
                 android:textColorHint="#9B9B9B" />
         </LinearLayout>
@@ -157,11 +163,13 @@
             android:orientation="horizontal">
 
             <EditText
+                android:id="@+id/et_nickname"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="2dp"
                 android:hint="2~10자의 닉네임 입력"
+                android:inputType="text"
                 android:textColor="#1B1B1B"
                 android:textColorHint="#9B9B9B" />
         </LinearLayout>
