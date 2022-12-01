@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1063149586582",
+    "project_id": "machumbub-57f0f",
+    "storage_bucket": "machumbub-57f0f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063149586582:android:d3bbbd5594b30cb709dab7",
+        "android_client_info": {
+          "package_name": "com.example.machumbub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063149586582-t6jhtlhka2jkjt7cq2dh58nnurhtv5hp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhopunvelhZJi83j6v6Jtr8f17REEJwhE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063149586582-t6jhtlhka2jkjt7cq2dh58nnurhtv5hp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
