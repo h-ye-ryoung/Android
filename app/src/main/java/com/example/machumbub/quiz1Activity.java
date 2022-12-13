@@ -105,6 +105,12 @@ public class quiz1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz1);
 
+        //툴바 생성
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); //뒤로가기버튼
+        getSupportActionBar().setTitle("메인 화면"); //툴바 제목
+
         memo = (Button) findViewById(R.id.memo);
         levelsolve = (Button) findViewById(R.id.levelsolve);
         resolve = (Button) findViewById(R.id.resolve);
@@ -163,6 +169,21 @@ public class quiz1Activity extends AppCompatActivity {
 
         totalCorrectTextView.setText("누적 점수: 0");
         correctIncorrectTextView.setText("Correct/Incorrect");
+    }
+
+    //툴바 설정
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()){
+            case android.R.id.home: { //백 키 눌렀을 때 동작
+
+                //액티비티 이동
+                Intent intent = new Intent(getApplicationContext(), MainLevelActivity.class);
+                startActivity(intent);
+                return true;
+            }
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     void showProblem() {

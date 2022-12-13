@@ -22,10 +22,10 @@
         <entry key="app/src/main/res/layout/activity_real_signup.xml" value="0.2823654174804688" />
         <entry key="app/src/main/res/layout/activity_signup.xml" value="0.23935852050781248" />
         <entry key="app/src/main/res/layout/activity_view.xml" value="0.24270833333333333" />
-        <entry key="app/src/main/res/layout/activity_write_memo.xml" value="0.1681961059570312" />
+        <entry key="app/src/main/res/layout/activity_write_memo.xml" value="0.1" />
         <entry key="app/src/main/res/layout/botton_tap.xml" value="0.1708312988281251" />
         <entry key="app/src/main/res/layout/fragment_community.xml" value="0.246875" />
-        <entry key="app/src/main/res/layout/fragment_levlel_solve.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_levlel_solve.xml" value="0.25457000732421864" />
         <entry key="app/src/main/res/layout/fragment_memo.xml" value="0.246875" />
         <entry key="app/src/main/res/layout/fragment_resolve.xml" value="0.246875" />
         <entry key="app/src/main/res/xml/radius.xml" value="0.17980072463768115" />

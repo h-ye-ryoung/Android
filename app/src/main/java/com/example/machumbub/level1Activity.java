@@ -24,6 +24,12 @@ public class level1Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_level1);
 
+        //툴바 생성
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); //뒤로가기버튼
+        getSupportActionBar().setTitle("메모 목록"); //툴바 제목
+
         //레벨별 버튼
         Button level1_1b = (Button) findViewById(R.id.level1_1);
         level1_1b.setOnClickListener(new View.OnClickListener() {
@@ -80,11 +86,6 @@ public class level1Activity extends AppCompatActivity {
             }
         });
 
-        //툴바 생성
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true); //뒤로가기버튼
-        getSupportActionBar().setTitle("메인 화면"); //툴바 제목
     }
 
 

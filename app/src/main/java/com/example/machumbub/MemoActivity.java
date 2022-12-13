@@ -33,6 +33,14 @@ public class MemoActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memo);
+
+        //툴바 생성
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true); //뒤로가기버튼
+        getSupportActionBar().setTitle("메모 목록"); //툴바 제목
+
+
         pref = new PreferenceManager();
         write_btn = findViewById(R.id.write_btn);
         write_btn.setOnClickListener(new View.OnClickListener() {
@@ -46,7 +54,8 @@ public class MemoActivity extends AppCompatActivity {
         //리사이클러뷰 세팅
         LinearLayoutManager linearLayoutManager;
         recyclerView = findViewById(R.id.memo_rv);//리사이클러뷰 findView
-        linearLayoutManager = new LinearLayoutManager(MemoActivity.this, LinearLayoutManager.VERTICAL, false);
+        linearLayoutManager = new LinearLayoutManager(MemoActivity.this, LinearLayoutManager.VERTICAL,
+                false);
 
         memoAdapter = new MemoAdapter(MemoActivity.this);
         recyclerView.setLayoutManager(linearLayoutManager);//linearlayout 세팅
@@ -75,12 +84,10 @@ public class MemoActivity extends AppCompatActivity {
             memoAdapter.notifyDataSetChanged();
 
         }
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true); //뒤로가기버튼
-        getSupportActionBar().setTitle("메인 화면"); //툴바 제목
         //pref.clear(MainActivity.this);
     }
+
+    //툴바 설정
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
