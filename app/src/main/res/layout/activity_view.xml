@@ -27,7 +27,6 @@
         android:orientation="vertical">
 
         <TextView
-            android:background="@drawable/borderline"
             android:id="@+id/view_title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

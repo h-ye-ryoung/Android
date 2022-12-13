@@ -35,7 +35,6 @@ public class WriteMemoActivity extends AppCompatActivity {
 
 
         pref = new PreferenceManager();
-        back_btn = findViewById(R.id.back_btn);
         save_btn = findViewById(R.id.save_btn);
         // editText 할당
         title = findViewById(R.id.memo_title_edit);
