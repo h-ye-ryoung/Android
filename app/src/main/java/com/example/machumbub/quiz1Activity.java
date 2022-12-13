@@ -31,6 +31,8 @@ import android.os.Handler;
 
 public class quiz1Activity extends AppCompatActivity {
 
+    Button memo, levelsolve, resolve, community;
+
     TextView quiz1_main;
     Button quiz_button1;
     Button quiz_button2;
@@ -102,6 +104,53 @@ public class quiz1Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz1);
+
+        memo = (Button) findViewById(R.id.memo);
+        levelsolve = (Button) findViewById(R.id.levelsolve);
+        resolve = (Button) findViewById(R.id.resolve);
+        community = (Button) findViewById(R.id.community);
+
+
+        memo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MemoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        levelsolve.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                LevlelSolveFragment levlelSolveFragment = new LevlelSolveFragment();
+                transaction.replace(R.id.main_frame, levlelSolveFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
+
+        resolve.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                ResolveFragment resolveFragment = new ResolveFragment();
+                transaction.replace(R.id.main_frame, resolveFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
+
+        community.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                CommunityFragment communityFragment = new CommunityFragment();
+                transaction.replace(R.id.main_frame, communityFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
 
         quiz1_main = findViewById(R.id.quiz1_main);
         quiz_button1 = findViewById(R.id.quiz_button1);

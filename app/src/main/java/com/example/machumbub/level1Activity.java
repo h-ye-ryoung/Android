@@ -17,6 +17,8 @@ import java.util.logging.Level;
 
 public class level1Activity extends AppCompatActivity {
 
+    Button memo, levelsolve, resolve, community;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,52 @@ public class level1Activity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), quiz1Activity.class);
                 startActivity(intent);
+            }
+        });
+
+        memo = (Button) findViewById(R.id.memo);
+        levelsolve = (Button) findViewById(R.id.levelsolve);
+        resolve = (Button) findViewById(R.id.resolve);
+        community = (Button) findViewById(R.id.community);
+
+        memo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), MemoActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        levelsolve.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                LevlelSolveFragment levlelSolveFragment = new LevlelSolveFragment();
+                transaction.replace(R.id.main_frame, levlelSolveFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
+
+        resolve.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                ResolveFragment resolveFragment = new ResolveFragment();
+                transaction.replace(R.id.main_frame, resolveFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
+            }
+        });
+
+        community.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+                CommunityFragment communityFragment = new CommunityFragment();
+                transaction.replace(R.id.main_frame, communityFragment);
+                transaction.addToBackStack(null);
+                transaction.commit();
             }
         });
 
@@ -47,7 +95,7 @@ public class level1Activity extends AppCompatActivity {
             case android.R.id.home: { //백 키 눌렀을 때 동작
 
                 //액티비티 이동
-                Intent intent = new Intent(getApplicationContext(), MainLevelActivity.class);
+                Intent intent = new Intent(getApplicationContext(), LevlelSolveFragment.class);
                 startActivity(intent);
                 return true;
             }

@@ -131,6 +131,74 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/main_frame">
+        <Button
+            android:id="@+id/community"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:layout_weight="1"
+            android:background="#00ff0000"
+            android:drawableTop="@drawable/comunity"
+            android:drawableTint="@color/icon"
+            android:fontFamily="@font/inter_medium"
+            android:text="커뮤니티"
+            android:textColor="@color/icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/resolve"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/memo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:background="#00ff0000"
+            android:drawableTop="@drawable/memo"
+            android:drawableTint="@color/icon"
+            android:fontFamily="@font/inter_medium"
+            android:text="메모"
+            android:textColor="@color/icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/levelsolve"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/levelsolve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:background="#00ff0000"
+            android:drawableTop="@drawable/levelsolve"
+            android:drawableTint="@color/icon"
+            android:fontFamily="@font/inter_medium"
+            android:text="레벨별 풀이"
+            android:textColor="@color/icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/resolve"
+            app:layout_constraintStart_toEndOf="@+id/memo"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/resolve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:layout_weight="1"
+            android:background="#00ff0000"
+            android:drawableTop="@drawable/re_solve"
+            android:drawableTint="@color/icon"
+            android:fontFamily="@font/inter_medium"
+            android:text="재풀이"
+            android:textColor="@color/icon"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/community"
+            app:layout_constraintStart_toEndOf="@+id/levelsolve"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

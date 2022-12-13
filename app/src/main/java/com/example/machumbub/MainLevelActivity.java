@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import java.util.logging.Level;
 
@@ -19,6 +20,8 @@ import java.util.logging.Level;
 public class MainLevelActivity extends AppCompatActivity {
 
     Button memo, levelsolve, resolve, community;
+    FragmentManager fm;
+    FragmentTransaction ft;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,20 +29,23 @@ public class MainLevelActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_level);
 
         //레벨1버튼
-        Button level1b = (Button) findViewById(R.id.level1);
+        /*Button level1b = (Button) findViewById(R.id.level1);
         level1b.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), level1Activity.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
         //하단탭
         memo = (Button) findViewById(R.id.memo);
         levelsolve = (Button) findViewById(R.id.levelsolve);
         resolve = (Button) findViewById(R.id.resolve);
         community = (Button) findViewById(R.id.community);
+
+        LevlelSolveFragment levlelSolveFragment = new LevlelSolveFragment();
+        getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, levlelSolveFragment).commit();
 
         memo.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -97,11 +103,14 @@ public class MainLevelActivity extends AppCompatActivity {
             case android.R.id.home: { //백 키 눌렀을 때 동작
 
                 //액티비티 이동
-                Intent intent = new Intent(getApplicationContext(), MypageActivity.class);
+                Intent intent = new Intent(getApplicationContext(), RealSignupActivity.class);
                 startActivity(intent);
                 return true;
             }
         }
         return super.onOptionsItemSelected(item);
     }
+
+    //마이페이지 설정
+
 }
